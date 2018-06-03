@@ -22,7 +22,7 @@
         ]
     },
     "files": [
-        "ng2-pica.ts"
+        "ng6-pica.ts"
     ],
     "angularCompilerOptions": {
         "strictMetadataEmit": true

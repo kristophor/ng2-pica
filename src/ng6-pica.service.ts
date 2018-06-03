@@ -1,11 +1,11 @@
 import { Injectable, Inject, forwardRef } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
 import pica from 'pica/dist/pica';
 
 declare var window;
 
 import { ImgExifService } from './img-exif.service';
+import {Subject} from "rxjs/internal/Subject";
+import {Observable} from "rxjs/internal/Observable";
 
 export interface ResizeCanvasOptions {
     quality?: number;
@@ -29,7 +29,7 @@ export interface ResizeBufferOptions {
 }
 
 @Injectable()
-export class Ng2PicaService {
+export class Ng6PicaService {
     constructor(@Inject(forwardRef(() => ImgExifService)) private imageExifService:ImgExifService){
     }
     public resize(files: File[], width: number, height: number, keepAspectRatio: boolean = false): Observable<any> {

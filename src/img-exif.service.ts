@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import 'exif-js/exif';
-declare var EXIF: any;
+import EXIF from 'exif-js'
 
 @Injectable()
 export class ImgExifService {
@@ -9,7 +9,6 @@ export class ImgExifService {
             let img:any;
 
             if(!EXIF){
-                EXIF = {};
                 EXIF.getData = function(img, callback){
                     callback.call(image);
                     return true;
